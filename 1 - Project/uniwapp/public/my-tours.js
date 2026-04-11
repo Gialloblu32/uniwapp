@@ -115,6 +115,34 @@ function convertTo24Hour(timeStr) {
   return hours * 60 + minutes;
 }
 
+function getTimePeriodLabel(startTime, endTime) {
+  const startMinutes = convertTo24Hour(startTime);
+  const endMinutes = convertTo24Hour(endTime);
+  const noon = 12 * 60;
+
+  if (startMinutes !== null && endMinutes !== null) {
+    if (startMinutes < noon && endMinutes > noon) {
+      return "Full day";
+    }
+
+    if (startMinutes >= noon) {
+      return "PM";
+    }
+
+    return "AM";
+  }
+
+  if (startMinutes !== null) {
+    return startMinutes >= noon ? "PM" : "AM";
+  }
+
+  if (endMinutes !== null) {
+    return endMinutes > noon ? "PM" : "AM";
+  }
+
+  return "Full day";
+}
+
 function sortSelections(selections) {
   return [...selections].sort((a, b) => {
     const dayA = Number(a.day_number || 0);
@@ -232,17 +260,11 @@ function renderSelections() {
 
   tourList.innerHTML = groupedDays
     .map((dayGroup, index) => {
-      const formatTimeText = (value) =>
-        value.replace(/\s+(AM|PM)\b/g, "&nbsp;$1");
-
       const guestSections = Object.entries(dayGroup.guests)
         .map(([guestName, items]) => {
           const rowsHtml = items
             .map((item) => {
-              const timeText =
-                item.start_time && item.end_time
-                  ? `${formatTimeText(item.start_time)} - ${formatTimeText(item.end_time)}`
-                  : formatTimeText(item.start_time || item.end_time || "Time to be announced");
+              const timeText = getTimePeriodLabel(item.start_time, item.end_time);
 
               return `
                 <tr>
