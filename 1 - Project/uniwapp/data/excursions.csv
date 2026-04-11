@@ -1,0 +1,56 @@
+day,city,section,name,start_time,end_time,price,capacity_min,capacity_max,status
+1,Amsterdam,onboard,Embarkation and Welcome Reception,3:00 PM,5:30 PM,,,,active
+1,Amsterdam,onboard,Captain's Introduction,6:00 PM,6:45 PM,,,,active
+1,Amsterdam,onboard,Evening Piano Hour,8:30 PM,9:30 PM,,,,active
+,,,,,,,,,
+2,Amsterdam,included,Historic Canal Walk,8:30 AM,10:30 AM,,10,30,active
+2,Amsterdam,included,Dutch Market Stroll,10:00 AM,12:00 PM,,8,24,active
+2,Amsterdam,masterpiece,Private Dutch Art Experience,9:30 AM,12:30 PM,95,6,18,active
+2,Amsterdam,masterpiece,Gourmet Amsterdam Tasting,1:30 PM,4:00 PM,110,6,16,active
+2,Amsterdam,special-dinner,Chef's Table Amsterdam,7:00 PM,9:00 PM,135,6,12,active
+2,Amsterdam,special-dinner,Wine Tasting Dinner,7:30 PM,9:00 PM,95,8,16,active
+2,Amsterdam,onboard,River Cruising Essentials Talk,5:00 PM,5:45 PM,,,,active
+2,Amsterdam,onboard,Sunset Cocktail Hour,6:30 PM,7:30 PM,,,,active
+,,,,,,,,,
+3,Cologne,included,Old Town Walking Tour,8:45 AM,11:15 AM,,10,30,active
+3,Cologne,included,Cologne Landmarks by Coach,9:00 AM,11:30 AM,,12,32,active
+3,Cologne,masterpiece,Cologne Beer and Culinary Experience,10:30 AM,1:30 PM,89,8,20,active
+3,Cologne,masterpiece,Rhine Art and Architecture Tour,2:00 PM,5:00 PM,99,6,18,active
+3,Cologne,special-dinner,Progressive Dinner Cologne,7:00 PM,9:30 PM,120,8,18,active
+3,Cologne,onboard,Rhine Legends Presentation,5:15 PM,6:00 PM,,,,active
+3,Cologne,onboard,Classical Duo Performance,8:15 PM,9:15 PM,,,,active
+,,,,,,,,,
+4,Koblenz,included,Koblenz Old Town Discovery,8:30 AM,10:30 AM,,10,28,active
+4,Koblenz,included,Riverside Heritage Walk,10:15 AM,12:00 PM,,8,24,active
+4,Koblenz,masterpiece,Castle Visit and Scenic Drive,9:00 AM,12:30 PM,105,6,18,active
+4,Koblenz,masterpiece,Private Wine Estate Visit,1:30 PM,4:30 PM,115,6,16,active
+4,Koblenz,special-dinner,Chef's Table Koblenz,7:30 PM,9:30 PM,135,6,12,active
+4,Koblenz,onboard,Afternoon Pastry Demonstration,4:45 PM,5:30 PM,,,,active
+4,Koblenz,onboard,Evening Trivia by the Lounge,8:30 PM,9:15 PM,,,,active
+,,,,,,,,,
+5,Rudesheim,included,Vineyard Train and Town Walk,8:30 AM,10:30 AM,,10,30,active
+5,Rudesheim,included,Music Museum Visit,10:00 AM,11:45 AM,,8,22,active
+5,Rudesheim,masterpiece,Premium Riesling Tasting,9:15 AM,11:45 AM,92,6,18,active
+5,Rudesheim,masterpiece,Private Countryside Escape,1:00 PM,4:30 PM,120,6,14,active
+5,Rudesheim,special-dinner,Progressive Dinner Rudesheim,7:00 PM,9:00 PM,118,8,18,active
+5,Rudesheim,onboard,Rhine Valley Scenic Commentary,4:45 PM,5:30 PM,,,,active
+5,Rudesheim,onboard,Lounge Dance Evening,8:45 PM,10:00 PM,,,,active
+,,,,,,,,,
+6,Heidelberg,included,Heidelberg Walking Tour,8:30 AM,11:00 AM,,10,30,active
+6,Heidelberg,included,Philosophers' Path Discovery,10:30 AM,12:30 PM,,8,20,active
+6,Heidelberg,masterpiece,Castle and Garden Experience,9:00 AM,12:30 PM,98,6,18,active
+6,Heidelberg,masterpiece,Gourmet Heidelberg Lunch Journey,12:00 PM,3:00 PM,118,6,16,active
+6,Heidelberg,special-dinner,Chef's Table Heidelberg,7:00 PM,9:00 PM,138,6,12,active
+6,Heidelberg,special-dinner,Progressive Dinner Heidelberg,7:30 PM,9:30 PM,122,8,18,active
+6,Heidelberg,onboard,German Traditions Workshop,5:00 PM,5:45 PM,,,,active
+6,Heidelberg,onboard,Acoustic Evening Set,8:15 PM,9:15 PM,,,,active
+,,,,,,,,,
+7,Strasbourg,included,Grande Ile Walking Tour,8:30 AM,11:00 AM,,10,30,active
+7,Strasbourg,included,Cathedral and Squares Visit,9:30 AM,11:30 AM,,8,24,active
+7,Strasbourg,masterpiece,Alsatian Gourmet Experience,10:00 AM,1:00 PM,112,6,18,active
+7,Strasbourg,masterpiece,Private Scenic Alsace Drive,1:30 PM,4:30 PM,125,6,16,active
+7,Strasbourg,onboard,Farewell Toast,6:00 PM,6:45 PM,,,,active
+7,Strasbourg,onboard,Farewell Music Night,8:30 PM,9:30 PM,,,,active
+,,,,,,,,,
+8,Basel,onboard,Disembarkation Assistance,7:00 AM,9:00 AM,,,,active
+8,Basel,onboard,Final Departure Information Desk,7:30 AM,9:30 AM,,,,active

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day Overview</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+<div class="brand brand-logo">
+  <img src="logo.png" alt="Leanapp logo">
+</div>
+      <div class="topbar-side right" id="roomText"></div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <span id="overviewNavItem" class="nav-link" onclick="goToOverview()">Cruise Overview</span>
+      <span id="signupSeparator" class="nav-separator">•</span>
+      <span id="signupNavItem" class="nav-link" onclick="goToSignup()">Select My Tours</span>
+      <span id="myToursSeparator" class="nav-separator">•</span>
+      <span id="myToursNavItem" class="nav-link" onclick="goToMyTours()">My Excursions</span>
+    </div>
+  </nav>
+
+  <main class="page day-page">
+    <section class="hero day-hero">
+      <h1 id="dayTitle">Day Overview</h1>
+    </section>
+
+    <section class="card day-card" id="includedSection">
+      <h2 class="section-title">Included Excursions</h2>
+      <div id="includedList" class="day-list"></div>
+    </section>
+
+    <section class="card day-card" id="masterpieceSection">
+      <h2 class="section-title">Masterpiece Collection</h2>
+      <div id="masterpieceList" class="day-list"></div>
+    </section>
+
+    <section class="card day-card" id="specialDinnerSection">
+      <h2 class="section-title">Special Dinners</h2>
+      <div id="specialDinnerList" class="day-list"></div>
+    </section>
+
+    <section class="card day-card" id="onboardSection">
+      <h2 class="section-title">Onboard Activities</h2>
+      <div id="onboardList" class="day-list"></div>
+    </section>
+
+    <div class="actions-row day-actions">
+      <button class="app-btn secondary" onclick="goToPreviousDay()">Previous Day</button>
+      <button class="app-btn secondary" onclick="goToNextDay()">Next Day</button>
+      <button class="app-btn secondary" onclick="scrollToTopPage()">Back to Top</button>
+    </div>
+  </main>
+
+  <script src="day.js"></script>
+</body>
+</html>

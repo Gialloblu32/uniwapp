@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reception Module</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-side left">
+        <button class="app-btn secondary reception-module-btn" onclick="window.location.href='index.html'">
+          Guests Module
+        </button>
+      </div>
+
+<div class="brand brand-logo">
+  <img src="logo.png" alt="Leanapp logo">
+</div>
+
+      <div class="topbar-side right" id="cruiseCodeText"></div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <span class="nav-link active-link">Reception Module</span>
+      <span class="nav-separator">•</span>
+      <span class="nav-link" onclick="window.location.href='reception-guest-excursions.html'">Excursions by Guest</span>
+      <span class="nav-separator">•</span>
+      <span class="nav-link" onclick="goToReceptionTotals()">Excursion Totals</span>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section class="hero">
+      <h1>Reception Module</h1>
+      <p>Simple overview of which rooms already submitted their excursions.</p>
+    </section>
+
+    <section class="card">
+      <div class="reception-summary" id="receptionSummary">
+        <div class="summary-box">
+          <span>Total Rooms</span>
+          <strong id="totalRooms">0</strong>
+        </div>
+        <div class="summary-box">
+          <span>Submitted</span>
+          <strong id="submittedRooms">0</strong>
+        </div>
+        <div class="summary-box">
+          <span>Pending</span>
+          <strong id="pendingRooms">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Rooms</h2>
+
+      <div class="table-wrap">
+        <table class="excursions-table">
+          <thead>
+            <tr>
+              <th>Room</th>
+              <th>Booking ID</th>
+              <th>Status</th>
+              <th>Submitted At</th>
+            </tr>
+          </thead>
+          <tbody id="roomsTableBody">
+            <tr>
+              <td colspan="4">Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="reception.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excursions by Guest</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-side left">
+        <button class="app-btn secondary reception-module-btn" onclick="window.location.href='reception.html'">
+          Reception Module
+        </button>
+      </div>
+
+      <div class="brand brand-logo">
+        <img src="logo.png" alt="Leanapp logo">
+      </div>
+
+      <div class="topbar-side right" id="cruiseCodeText"></div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <span class="nav-link" onclick="window.location.href='reception.html'">Reception Module</span>
+      <span class="nav-separator">•</span>
+      <span class="nav-link active-link">Excursions by Guest</span>
+      <span class="nav-separator">•</span>
+      <span class="nav-link" onclick="window.location.href='reception-totals.html'">Excursion Totals</span>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section class="hero">
+      <h1>Excursions by Guest</h1>
+      <p>Review selected excursions grouped by guest across the cruise.</p>
+    </section>
+
+    <section class="card">
+      <div id="guestExcursionsList" class="reception-totals-list">
+        <div class="empty-state">Loading...</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="reception-guest-excursions.js"></script>
+</body>
+</html>

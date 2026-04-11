@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reception Room Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+<div class="brand brand-logo">
+  <img src="logo.png" alt="Leanapp logo">
+</div>
+      <div class="topbar-side right" id="roomText"></div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="hero hidden">
+      <h1 id="roomTitle">Room Details</h1>
+      <p id="roomSubtitle">Submitted excursions for this room.</p>
+    </section>
+
+    <section class="card">
+      <div class="actions-row">
+        <button class="app-btn secondary" onclick="goBackToReception()">Back to Reception</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Booking Information</h2>
+      <div id="roomInfo"></div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Submitted Excursions</h2>
+      <div id="roomSelections"></div>
+    </section>
+  </main>
+
+  <script src="reception-room.js"></script>
+</body>
+</html>

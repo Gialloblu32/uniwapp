@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Tours</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-side left"></div>
+
+      <div class="brand brand-logo">
+        <img src="logo.png" alt="Leanapp logo">
+      </div>
+
+      <div class="topbar-side right" id="roomText"></div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <span id="overviewNavItem" class="nav-link" onclick="goToOverview()">Cruise Overview</span>
+      <span id="signupSeparator" class="nav-separator">•</span>
+      <span id="signupNavItem" class="nav-link" onclick="goToSignup()">Select My Tours</span>
+      <span id="myToursSeparator" class="nav-separator">•</span>
+      <span id="myToursNavItem" class="nav-link active-link" onclick="goToMyTours()">My Excursions</span>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section class="hero">
+      <h1>My Excursion Choices</h1>
+      <p>Here you can review the excursions already submitted for your booking.</p>
+    </section>
+
+    <section class="card my-tours-main-card">
+      <h2>Your Selections</h2>
+      <div id="tourList"></div>
+
+      <div class="actions-row" id="myToursActions">
+        <button class="app-btn secondary" onclick="goToOverview()">Back to Overview</button>
+        <button class="app-btn secondary" onclick="logout()">Logout</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="my-tours.js"></script>
+</body>
+</html>

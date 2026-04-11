@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cruise Overview</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar" id="top">
+    <div class="topbar-inner">
+      <div class="topbar-side left">
+        <button class="app-btn secondary reception-module-btn" onclick="window.location.href='reception.html'">
+          Reception Module
+        </button>
+      </div>
+
+      <div class="brand brand-logo">
+  <img src="logo.png" alt="Leanapp logo">
+</div>
+
+      <div class="topbar-side right"></div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <span id="overviewNavItem" class="nav-link active-link" onclick="goToOverview()">Cruise Overview</span>
+      <span id="signupSeparator" class="nav-separator">•</span>
+      <span id="signupNavItem" class="nav-link" onclick="goToSignup()">Select My Tours</span>
+      <span id="myToursSeparator" class="nav-separator">•</span>
+      <span id="myToursNavItem" class="nav-link" onclick="goToMyTours()">My Excursions</span>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section class="hero">
+      <h1>Cruise Overview</h1>
+      <p>Select a day to view ports, excursions, and onboard events.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Daily Overview</h2>
+
+      <div class="day-grid" id="dayGrid">
+        <button class="app-btn day-btn" data-day="1" onclick="goToDay(1)">Day 1</button>
+        <button class="app-btn day-btn" data-day="2" onclick="goToDay(2)">Day 2</button>
+        <button class="app-btn day-btn" data-day="3" onclick="goToDay(3)">Day 3</button>
+        <button class="app-btn day-btn" data-day="4" onclick="goToDay(4)">Day 4</button>
+        <button class="app-btn day-btn" data-day="5" onclick="goToDay(5)">Day 5</button>
+        <button class="app-btn day-btn" data-day="6" onclick="goToDay(6)">Day 6</button>
+        <button class="app-btn day-btn" data-day="7" onclick="goToDay(7)">Day 7</button>
+        <button class="app-btn day-btn" data-day="8" onclick="goToDay(8)">Day 8</button>
+      </div>
+
+      <div class="actions-row overview-actions">
+        <button class="app-btn secondary" onclick="scrollToTopPage()">Back to Top</button>
+        <button id="logoutButton" class="app-btn secondary" onclick="logout()">Logout</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>

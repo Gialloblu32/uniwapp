@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select My Tours</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+<div class="brand brand-logo">
+  <img src="logo.png" alt="Leanapp logo">
+</div>
+      <div class="topbar-side right" id="bookingText"></div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <span id="overviewNavItem" class="nav-link" onclick="goToOverview()">Cruise Overview</span>
+      <span id="signupSeparator" class="nav-separator">•</span>
+      <span id="signupNavItem" class="nav-link active-link">Select My Tours</span>
+      <span id="myToursSeparator" class="nav-separator">•</span>
+      <span id="myToursNavItem" class="nav-link" onclick="goToMyTours()">My Excursions</span>
+    </div>
+  </nav>
+
+  <main class="signup-page">
+
+    <section id="loginSection" class="card login-card">
+      <h2>Please Log In</h2>
+      <p class="total-subtext">Enter your booking ID and last name to select excursions.</p>
+
+      <form id="loginForm" class="login-form">
+        <div>
+          <label for="bookingId">Booking ID</label>
+          <input type="text" id="bookingId" name="bookingId" required>
+        </div>
+
+        <div>
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+
+        <div>
+          <button type="submit" class="primary-btn">Log In</button>
+        </div>
+      </form>
+
+      <p id="loginMessage" class="message"></p>
+    </section>
+
+    <section id="excursionsSection" class="hidden">
+      <section class="card day-group-card compact-day-group-card">
+        <p id="welcomeText" class="info-text"></p>
+      </section>
+
+      <section id="daysContainer"></section>
+
+      <section class="card total-card compact-confirm-card">
+        <div class="total-card-inner compact-total-inner">
+          <div class="total-text-block">
+            <h2>Confirm Your Selections</h2>
+          </div>
+
+          <div class="total-price-box compact-total-box">
+            <span>TOTAL</span>
+            <strong id="totalPrice">€0</strong>
+          </div>
+        </div>
+
+        <div class="important-warning compact-warning">
+          Please note that Masterpiece Collection excursion reservations are non-refundable once submitted.
+        </div>
+
+        <div class="agreement-row">
+          <label class="agreement-label" for="chargeAgreementCheckbox">
+            <input type="checkbox" id="chargeAgreementCheckbox">
+            <span>I agree that this amount will be charged to my onboard account for my selections.</span>
+          </label>
+        </div>
+
+        <p id="chargeAgreementMessage" class="message"></p>
+        <button class="primary-btn confirm-btn" id="confirmSelectionsBtn">Submit My Selections</button>
+        <p id="confirmMessage" class="confirm-message"></p>
+      </section>
+    </section>
+
+  </main>
+
+  <script src="signup.js"></script>
+</body>
+</html>
