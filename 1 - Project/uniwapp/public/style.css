@@ -2133,5 +2133,48 @@ body {
   .excursion-meta span + span {
     margin-top: 2px;
   }
+  /* =========================
+   FIX: NO HORIZONTAL SCROLL FOR GUEST TOTALS
+   ========================= */
+
+@media (max-width: 700px) {
+
+  .signup-guest-totals-table {
+    display: block;
+    width: 100%;
+  }
+
+  .signup-guest-totals-table thead {
+    display: none;
+  }
+
+  .signup-guest-totals-table tbody {
+    display: block;
+  }
+
+  .signup-guest-totals-table tbody tr {
+    display: block;
+    width: 100%;
+  }
+
+  .signup-guest-totals-table tbody td {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 8px 0;
+  }
+
+  .signup-guest-total-cell {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brand);
+  }
+
+  .signup-guest-totals-table tbody td:first-child {
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+}
 }
 
