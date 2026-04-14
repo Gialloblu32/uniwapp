@@ -87,7 +87,7 @@ body {
 
 .brand-logo:hover {
   transform: scale(1.25);
-  opacity: 0.7  ;
+  opacity: 0.7;
 }
 
 .brand-logo:focus-visible {
@@ -967,7 +967,7 @@ body {
   line-height: 1.4;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 900px) {
   .excursion-details,
   .compact-excursion-details {
     display: grid;
@@ -977,7 +977,10 @@ body {
 
   .excursion-details span,
   .compact-excursion-details span {
+    display: block;
     min-width: 0;
+    max-width: 100%;
+    white-space: nowrap;
   }
 }
 
