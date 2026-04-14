@@ -590,7 +590,19 @@ function renderGuestTotalsSummary() {
         <tbody>
           <tr>
             <td class="excursion-name-cell"><strong>Total by Guest</strong></td>
-            ${guestTotals.map((guest) => `<td class="signup-guest-total-cell"><strong>${formatEuroAmount(guest.total)}</strong></td>`).join("")}
+            ${guestTotals
+              .map(
+                (guest) => `
+                  <td
+                    class="signup-guest-total-cell"
+                    data-guest-name="${guest.guest_name}"
+                  >
+                    <span class="signup-guest-total-name">${guest.guest_name}</span>
+                    <strong>${formatEuroAmount(guest.total)}</strong>
+                  </td>
+                `
+              )
+              .join("")}
           </tr>
         </tbody>
       </table>

@@ -1701,6 +1701,10 @@ body {
   color: var(--brand);
 }
 
+.signup-guest-total-name {
+  display: none;
+}
+
 .reception-module-btn {
   min-height: 36px;
   padding: 8px 14px;
@@ -2109,39 +2113,11 @@ body {
     white-space: nowrap;
   }
 
-  .signup-guest-totals-table thead {
-    display: table-header-group;
-  }
-
-  .signup-guest-totals-table thead th,
-  .signup-guest-totals-table tbody td {
-    font-size: 0.9rem;
-    padding: 10px 8px;
-  }
-
-  .compact-total-box {
-    display: none;
-  }
-}
-
-@media (max-width: 470px) {
-  .excursion-meta span {
-    display: block;
-    width: 100%;
-  }
-
-  .excursion-meta span + span {
-    margin-top: 2px;
-  }
-  /* =========================
-   FIX: NO HORIZONTAL SCROLL FOR GUEST TOTALS
-   ========================= */
-
-@media (max-width: 700px) {
-
   .signup-guest-totals-table {
     display: block;
     width: 100%;
+    min-width: 0;
+    table-layout: auto;
   }
 
   .signup-guest-totals-table thead {
@@ -2162,12 +2138,8 @@ body {
     width: 100%;
     text-align: left;
     padding: 8px 0;
-  }
-
-  .signup-guest-total-cell {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--brand);
+    border-bottom: none;
+    background: transparent;
   }
 
   .signup-guest-totals-table tbody td:first-child {
@@ -2175,6 +2147,37 @@ body {
     margin-bottom: 6px;
   }
 
-}
+  .signup-guest-total-cell {
+    text-align: left;
+    padding: 10px 0 14px 0 !important;
+  }
+
+  .signup-guest-total-name {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--brand);
+  }
+
+  .signup-guest-total-cell strong {
+    display: block;
+    font-size: 1.1rem;
+  }
+
+  .compact-total-box {
+    display: none;
+  }
 }
 
+@media (max-width: 470px) {
+  .excursion-meta span {
+    display: block;
+    width: 100%;
+  }
+
+  .excursion-meta span + span {
+    margin-top: 2px;
+  }
+}
