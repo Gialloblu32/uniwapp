@@ -519,6 +519,7 @@ body {
   flex: 0 1 140px;
   min-width: 120px;
   max-width: 220px;
+  white-space: nowrap;
 }
 
 @media (max-width: 700px) {
