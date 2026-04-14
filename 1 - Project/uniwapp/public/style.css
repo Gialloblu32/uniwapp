@@ -522,9 +522,14 @@ body {
 }
 
 @media (max-width: 700px) {
+  .excursion-meta {
+    gap: 4px 12px;
+  }
+
   .excursion-meta span {
-    flex: 1 1 100%;
-    min-width: 100%;
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: none;
   }
 }
 
