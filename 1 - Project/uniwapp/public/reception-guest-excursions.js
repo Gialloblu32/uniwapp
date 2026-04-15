@@ -10,7 +10,7 @@ function buildExcursionLine(excursion) {
 
 function renderGuestExcursions(rooms) {
   if (!Array.isArray(rooms) || rooms.length === 0) {
-    guestExcursionsList.innerHTML = `<div class="empty-state">No guest excursions found.</div>`;
+    guestExcursionsList.innerHTML = `<div class="empty-state">No guest excursions have been submitted yet.</div>`;
     return;
   }
 
@@ -68,7 +68,7 @@ function renderGuestExcursions(rooms) {
 }
 
 async function loadGuestExcursions() {
-  guestExcursionsList.innerHTML = `<div class="empty-state">Loading...</div>`;
+  guestExcursionsList.innerHTML = `<div class="empty-state">Loading guest excursions...</div>`;
 
   try {
     const response = await fetch("/api/reception/excursions-by-guest");
@@ -85,7 +85,7 @@ async function loadGuestExcursions() {
 
     renderGuestExcursions(data.rooms || []);
   } catch (error) {
-    guestExcursionsList.innerHTML = `<div class="empty-state">Failed to load guest excursions: ${error.message}</div>`;
+    guestExcursionsList.innerHTML = `<div class="empty-state">Could not load guest excursions. Please refresh and try again.</div>`;
   }
 }
 

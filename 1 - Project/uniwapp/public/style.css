@@ -1701,10 +1701,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  align-items: center;
 }
 
 .reception-totals-day-card {
-  margin: 0;
+  width: min(100%, 1380px);
+  max-width: 1380px;
+  margin: 0 auto;
 }
 
 .reception-totals-day-header {

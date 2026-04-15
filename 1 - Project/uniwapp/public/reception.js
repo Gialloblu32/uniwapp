@@ -2,6 +2,8 @@ const cruiseCodeText = document.getElementById("cruiseCodeText");
 const totalRoomsElement = document.getElementById("totalRooms");
 const submittedRoomsElement = document.getElementById("submittedRooms");
 const pendingRoomsElement = document.getElementById("pendingRooms");
+const completionRateElement = document.getElementById("completionRate");
+const lastRefreshTextElement = document.getElementById("lastRefreshText");
 const roomsTableBody = document.getElementById("roomsTableBody");
 
 function goToReceptionTotals() {
@@ -34,10 +36,24 @@ function renderSummary(rooms) {
   const totalRooms = rooms.length;
   const submittedRooms = rooms.filter((room) => room.submitted).length;
   const pendingRooms = totalRooms - submittedRooms;
+  const completionRate = totalRooms > 0
+    ? Math.round((submittedRooms / totalRooms) * 100)
+    : 0;
 
   totalRoomsElement.textContent = String(totalRooms);
   submittedRoomsElement.textContent = String(submittedRooms);
   pendingRoomsElement.textContent = String(pendingRooms);
+
+  if (completionRateElement) {
+    completionRateElement.textContent = `${completionRate}%`;
+  }
+
+  if (lastRefreshTextElement) {
+    lastRefreshTextElement.textContent = new Date().toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit"
+    });
+  }
 }
 
 function sortRoomsBySubmissionTime(rooms) {
@@ -129,6 +145,12 @@ async function loadCruiseCode() {
 }
 
 async function loadRooms() {
+  roomsTableBody.innerHTML = `
+    <tr>
+      <td colspan="4">Loading room status...</td>
+    </tr>
+  `;
+
   try {
     const response = await fetch("/api/reception/rooms");
     const rooms = await response.json();

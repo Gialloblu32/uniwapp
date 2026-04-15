@@ -868,6 +868,12 @@ function renderDayTables(excursions, booking) {
 }
 
 async function loadExcursions() {
+  daysContainer.innerHTML = `
+    <section class="card">
+      <div class="empty-state">Loading excursions for your cruise...</div>
+    </section>
+  `;
+
   try {
     const response = await fetch("/api/excursions");
     const rawItems = await response.json();
@@ -889,7 +895,7 @@ async function loadExcursions() {
   } catch (error) {
     daysContainer.innerHTML = `
       <section class="card">
-        <p>Could not load excursions.</p>
+        <p>Could not load excursions. Please try again in a moment.</p>
       </section>
     `;
     excursionsSection.classList.remove("hidden");

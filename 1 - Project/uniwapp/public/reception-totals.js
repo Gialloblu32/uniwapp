@@ -72,7 +72,7 @@ function groupTotalsByDayAndPort(totals) {
 
 function renderTotalsList(totals) {
   if (!Array.isArray(totals) || totals.length === 0) {
-    excursionTotalsList.innerHTML = `<div class="empty-state">No excursions found.</div>`;
+    excursionTotalsList.innerHTML = `<div class="empty-state">No excursion totals are available yet for this cruise.</div>`;
     return;
   }
 
@@ -118,6 +118,8 @@ function renderTotalsList(totals) {
 }
 
 async function loadExcursionTotals() {
+  excursionTotalsList.innerHTML = `<div class="empty-state">Loading excursion totals...</div>`;
+
   try {
     const response = await fetch("/api/reception/excursion-totals");
     const data = await response.json();
