@@ -43,12 +43,12 @@ body {
 .topbar {
   background-color: #ffffff;
   border-bottom: 1px solid var(--line);
-  padding: 12px 24px;
+  padding: 10px 16px;
   box-shadow: 0 2px 8px rgba(26, 58, 82, 0.08);
 }
 
 .topbar-inner {
-  max-width: 1400px;
+  max-width: 1560px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -126,9 +126,9 @@ body {
 }
 
 .main-nav-inner {
-  max-width: 1400px;
+  max-width: 1560px;
   margin: 0 auto;
-  padding: 16px 24px;
+  padding: 14px 16px;
   display: flex;
   justify-content: center;
   gap: 32px;
@@ -177,15 +177,15 @@ body {
 }
 
 .page {
-  max-width: 1400px;
+  max-width: 1560px;
   margin: 0 auto;
-  padding: 48px 24px;
+  padding: 40px 16px;
 }
 
 .signup-page {
-  max-width: 1400px;
+  max-width: 1560px;
   margin: 0 auto;
-  padding: 48px 24px;
+  padding: 40px 16px;
 }
 
 .hero {
@@ -1309,14 +1309,14 @@ body {
 
 .page > .card,
 .signup-page > .card {
-  max-width: 1200px;
+  max-width: 1420px;
   margin: 0 auto 18px auto;
 }
 
 .confirmation-banner,
 .info-text,
 .confirm-message {
-  max-width: 1200px;
+  max-width: 1420px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1725,7 +1725,7 @@ body {
 
 @media (max-width: 900px) {
   .topbar {
-    padding: 8px 18px 6px;
+    padding: 8px 12px 6px;
   }
 
   .brand-logo img {
@@ -1910,8 +1910,8 @@ body {
 
   .page,
   .signup-page {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
     padding-bottom: 22px;
   }
 
