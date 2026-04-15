@@ -330,6 +330,15 @@ function splitGuestName(fullName, index) {
   };
 }
 
+function escapeHtml(value) {
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 function convertTo24Hour(timeStr) {
   if (!timeStr) {
     return null;
@@ -705,11 +714,22 @@ function renderExcursionCards(excursions, booking, savedSelections, bookingConfi
           );
 
           const name = splitGuestName(guest.full_name, i);
+          const safeFirstName = escapeHtml(name.firstName);
+          const safeLastName = escapeHtml(name.lastName);
+          const safeFullName = escapeHtml(guest.full_name || `${name.firstName} ${name.lastName}`.trim());
+          const mobileInitials = name.lastName
+            ? `${name.firstName.charAt(0)}.${name.lastName.charAt(0)}.`
+            : `${name.firstName.charAt(0)}.`;
+          const safeMobileInitials = escapeHtml(mobileInitials.toUpperCase());
+          const desktopLabel = name.lastName
+            ? `${safeFirstName}<br>${safeLastName}`
+            : safeFirstName;
 
           return `
             <div class="guest-checkbox">
-              <div class="guest-label">
-                ${name.firstName}<br>${name.lastName}
+              <div class="guest-label" title="${safeFullName}" aria-label="${safeFullName}">
+                <span class="guest-label-full">${desktopLabel}</span>
+                <span class="guest-label-mobile">${safeMobileInitials}</span>
               </div>
               <input
                 type="checkbox"

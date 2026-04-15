@@ -1144,6 +1144,10 @@ body {
   word-break: break-word;
 }
 
+.guest-label-mobile {
+  display: none;
+}
+
 .excursion-card-new input {
   width: 20px;
   height: 20px;
@@ -1925,6 +1929,21 @@ body {
   .guest-label,
   .compact-excursion-card .guest-label {
     font-size: 0.7rem;
+  }
+
+  .guest-label {
+    word-break: normal;
+  }
+
+  .guest-label-full {
+    display: none;
+  }
+
+  .guest-label-mobile {
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: 0.02em;
   }
 
   .day-card {
