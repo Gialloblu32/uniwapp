@@ -6,11 +6,11 @@ const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const ACTIVE_CRUISE_CODE = "SC260322";
+const ACTIVE_CRUISE_CODE = "SC26XXXX";
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 const submissionsFile = path.join(__dirname, "data", "submissions.json");
 
@@ -36,6 +36,10 @@ function readSubmissions() {
 }
 
 function writeSubmissions(submissions) {
+  if (!fs.existsSync(submissionsFile)) {
+    fs.writeFileSync(submissionsFile, "[]", "utf8");
+  }
+
   fs.writeFileSync(submissionsFile, JSON.stringify(submissions, null, 2), "utf8");
 }
 

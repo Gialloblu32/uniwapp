@@ -2,7 +2,7 @@
   {
     "booking_id": "1000003",
     "room_number": "203",
-    "cruise_code": "SC260322",
+    "cruise_code": "SC26XXXX",
     "guests": [
       {
         "first_name": "David",

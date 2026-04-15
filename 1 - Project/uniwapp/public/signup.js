@@ -750,6 +750,9 @@ function renderExcursionCards(excursions, booking, savedSelections, bookingConfi
 
 function renderDayTables(excursions, booking) {
   daysContainer.innerHTML = "";
+  daysContainer.style.width = "min(100%, 1240px)";
+  daysContainer.style.maxWidth = "1240px";
+  daysContainer.style.margin = "0 auto";
   const savedSelections = getSavedSelections();
   const groupedDays = groupExcursionsByDay(excursions);
   const bookingConfirmed = isBookingConfirmed(booking.booking_id);
@@ -766,6 +769,9 @@ function renderDayTables(excursions, booking) {
   groupedDays.forEach((dayGroup, index) => {
     const section = document.createElement("section");
     section.className = `card day-group-card compact-day-group-card ${index % 2 === 0 ? "day-theme-light" : "day-theme-soft"}`;
+    section.style.width = "100%";
+    section.style.maxWidth = "1240px";
+    section.style.margin = "12px auto";
 
     const includedHtml = renderExcursionCards(
       dayGroup.included,
