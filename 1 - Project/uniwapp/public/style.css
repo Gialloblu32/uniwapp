@@ -1910,8 +1910,8 @@ body {
 
   .page,
   .signup-page {
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 22px;
   }
 
@@ -2085,6 +2085,17 @@ body {
 
   .my-tours-day-card {
     margin: 8px auto;
+    padding: 8px 10px;
+  }
+
+  .my-tours-main-card {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .day-card {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   #roomSelections .my-tours-day-card {
